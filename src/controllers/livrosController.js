@@ -8,6 +8,22 @@ class livroController {
         })
     }
 
+    static listarLivro = (req,res) => {
+        let index = buscaLivro(req.params.id);
+        return res.json(livros[index])
+    }
+    
+    static cadastrarLivro = (req,res) => {
+        let livro = new livros (req.body)
+        livro.save((err) => {
+
+            if(err) {
+                res.status(500).send({message: `${err.message} - falha ao cadastrar livro`})
+            } else {
+                res.status(201).send(livro.toJSON())
+            }
+        })
+    }
 }
 
 export default livroController;

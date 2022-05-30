@@ -2,13 +2,6 @@ Meu primeiro projeto utilizando NodeJS e Express.
 
 Para iniciar sem utilizar o Express devemos:
 * Criar um servidor através da criação do arquivo server.js
-* Importar a biblioteca padrão do Node para métodos http.
-* Criar uma variável para a porta que nosso servidor irá rodar localmente
-* E utilizar o método da biblioteca http chamado createServer para criar um servidor, de forma similar a:
-const server = http.createServer((req, res) => {
-    res.writeHead(200, {'Content-Type': 'text/plain'})
-    res.end(rotas[req.url]);
-})
 * Após instalarmos o nodemon nas dependências de dev (yarn add nodemon -D) do nosso projeto podemos editá-lo em tempo real pois o nodemon 
 faz uma espécie de auto-refresh pra gente.
 
